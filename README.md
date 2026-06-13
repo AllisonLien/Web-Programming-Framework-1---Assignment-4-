@@ -1,7 +1,18 @@
 困難 理解程式 不知道轉換新的json檔案是怎麼運作的 按照步驟也有點不知道是怎麼進行
 用了express-validator而不是提到的validateAddForm
 
-
+1. What is the difference between your /table-js route and your /table route?
+The /table-js route manually builds the HTML table by using JavaScript strings and sends the raw string to the browser using res.send(). The /table route uses the EJS to achieve separation of concerns; it passes the data array to the views/table.ejs file using res.render(), which handles the HTML structure cleanly.
+2. What does app.set("view engine", "ejs") do?
+It tells the Express application to use EJS as the default template engine. This allows Express to automatically look for .ejs files in the views directory and parse them into standard HTML before sending the response to the client.
+3. What does res.render("table", { records: dataset }) do?
+It leads Express to locate the table.ejs template file, compile it, and inject the dataset array into the template under the variable name records. Once the dynamic data is embedded into the HTML structure, it sends the final rendered HTML page back to the user's browser.
+4. What did you change in table.ejs to customize it for your dataset?
+I customized the table.ejs file to display my Video Game sales data. I changed the page heading to Game Catalogue Explorer and updated the table headers and data loops to use the real fields from my JSON file: Rank as the unique ID, Name, Genre, Platform, and Global_Sales.
+5. Did you deploy the app? If yes, provide the link. If not, explain the deployment issue.
+Yes I did.
+Github:https://github.com/AllisonLien/Webprograming_Assignment2
+Vercel:https://webprograming-assignment2.vercel.app/
 
 **Step1 Check point**
 Explain the command you used to run add-images.js. What are the input file, output file, category-like field, and title/name field in your command? Also explain what would happen if your dataset does not have the field name you passed as categoryField.
