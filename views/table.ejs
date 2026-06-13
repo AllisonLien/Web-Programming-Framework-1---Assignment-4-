@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= pageTitle %></title>
+    <link rel="stylesheet" href="/style.css"> 
+</head>
+<body>
+    <h1>Game Catalogue Explorer</h1> 
+    <table>
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Genre</th>
+                <th>Platform</th>
+                <th>Global Sales (Millions)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% records.forEach(function(game) { %>
+            <tr>
+                <td><%= game.Rank %></td>
+                <td><a href="/data/<%= game.Rank %>"><%= game.Name %></a></td>
+                <td><%= game.Genre %></td>
+                <td><%= game.Platform %></td>
+                <td><%= game.Global_Sales %></td>
+            </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>

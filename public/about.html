@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Game Sales API - About</title>
+    <style>
+        body { font-family: sans-serif; margin: 30px; line-height: 1.6; }
+        table, th, td { border: 1px solid black; border-collapse: collapse; padding: 10px; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h2>About This Project</h2>
+    <p>Allison(Yi-Chun Lien)</p>
+    <p>Student ID:n01745009</p>
+    <p>Dataset source: Kaggle</p>
+    <p>
+        Why selected? This dataset contains comprehensive historical data that allows for analyzing market trends, publisher dominance, and regional sales preferences. 
+    </p>
+
+    <h2>Field Mapping</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>API Route</th>
+                <th>Dataset Field</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>/data/:id</td>
+                <td><strong>rank</strong></td>
+            </tr>
+            <tr>
+                <td>/search?keyword=...</td>
+                <td><strong>name</strong> </td>
+            </tr>
+            <tr>
+                <td>/filter?category=...</td>
+                <td><strong>genre</strong></td>
+            </tr>
+            <tr>
+                <td>/sales</td>
+                <td><strong>global_sales</strong></td>
+            </tr>
+        </tbody>
+    </table>
+<br><br>
+    <a href="/">Back to Home</a>
+</body>
+</html>

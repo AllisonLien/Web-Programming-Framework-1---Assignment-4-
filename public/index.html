@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Game Sales</title>
+    <style>
+        body { font-family: sans-serif; margin: 30px; line-height: 1.6; }
+        ul { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <a href="/about">About Page</a>
+    <br>
+    <h1>Video Game Sales API</h1>
+    <p>Allison(Yi-Chun Lien)</p>
+    <p>Student ID:n01745009</p>
+    <p>Dataset topic: Video Game</p>
+    <h2>Test Routes</h2>
+    <ul>
+       <li><a href="/data" target="_blank">All Record(/data)</a></li>
+        <li><a href="/data/1" target="_blank">Single record search (/data/1)</a> - Find the record with rank 1.</li>
+        <li><a href="/search?keyword=Mario" target="_blank">Keyword search (/search?keyword=Mario)</a> - Search for games whose names contain Mario</li>
+        <li><a href="/filter?category=Sports" target="_blank">Category Filtering (/filter?category=Sports)</a> - Filter games by genre: Sports</li>
+        <li><a href="/sales" target="_blank">Sales Statistics Summary (/sales)</a> - View total and average sales</li>
+        <li><a href="/error-test" target="_blank">Test 404 error page</a> - Enter any non-existent path</li>
+    </ul>
+</body>
+</html>

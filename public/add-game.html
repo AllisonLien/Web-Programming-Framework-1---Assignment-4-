@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a New Video Game</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .form-group { margin-bottom: 15px; }
+        label { font-weight: bold; display: block; margin-bottom: 5px; }
+        input[type="text"], input[type="number"] { width: 300px; padding: 8px; }
+        button { padding: 10px 15px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Add a New Video Game</h1>
+    
+    <form action="/add-game" method="POST">
+        
+        <div class="form-group">
+            <label for="name">Game Name:</label>
+            <input type="text" id="name" name="name" placeholder="e.g., Super Mario Odyssey" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="genre">Genre:</label>
+            <input type="text" id="genre" name="genre" placeholder="e.g., Platform, RPG, Action" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="year">Release Year:</label>
+            <input type="number" id="year" name="year" placeholder="e.g., 2024" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="platform">Platform:</label>
+            <input type="text" id="platform" name="platform" placeholder="e.g., Switch, PS5, PC" required>
+        </div>
+        
+        <button type="submit">Submit Game </button>
+    </form>
+    
+    <br>
+    <a href="/">Back to Home</a>
+</body>
+</html>
