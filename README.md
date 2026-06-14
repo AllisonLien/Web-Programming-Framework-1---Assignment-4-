@@ -1,6 +1,7 @@
 困難 理解程式 不知道轉換新的json檔案是怎麼運作的 按照步驟也有點不知道是怎麼進行
 用了express-validator而不是提到的validateAddForm
 
+**README Questions**
 1. What is the difference between your /table-js route and your /table route?
 The /table-js route manually builds the HTML table by using JavaScript strings and sends the raw string to the browser using res.send(). The /table route uses the EJS to achieve separation of concerns; it passes the data array to the views/table.ejs file using res.render(), which handles the HTML structure cleanly.
 2. What does app.set("view engine", "ejs") do?
@@ -13,6 +14,7 @@ I customized the table.ejs file to display my Video Game sales data. I changed t
 Yes I did.
 Github:https://github.com/AllisonLien/Webprograming_Assignment2
 Vercel:https://webprograming-assignment2.vercel.app/
+
 
 **Step1 Check point**
 Explain the command you used to run add-images.js. What are the input file, output file, category-like field, and title/name field in your command? Also explain what would happen if your dataset does not have the field name you passed as categoryField.
@@ -42,3 +44,21 @@ The /table-js route mixes HTML directly inside server.js. It does this by concat
 The /table route uses res.render() to inject data into a separate .ejs file. The server handles the logic (data preparation), and the EJS template handles the presentation (HTML structure).
 3.why is the EJS version easier to maintain?
 The EJS version is easier to maintain because it code clarity: the HTML  stays in the .ejs file. Also good at debugging, if the layout breaks, I know exactly which .ejs file to look at. I don't need to go through whole server.js code to find a missing part or a broken quote.
+
+**Postman Collection Reflection**
+• What is the purpose of a Postman Collection?
+It serves as a documented, repeatable test for my API, allowing me to organize various request types GET, POST, and verify that my routes, parameters, and form validation work as expected.
+• Which route in your app uses req.params?
+The /data/:id route  to fetch a specific record by its rank.
+• Which route in your app uses req.query?
+The search?keyword=and filter?category= routes to handle search terms and category filtering.
+• Which route receives POST form data?
+The /add-game route receives POST data, which is parsed by express.urlencoded middleware.
+• What valid POST data did you test?
+ name:  Test , genre: Action, year: 2026, platform: PC
+• What invalid POST data did you test?
+ name:  , genre: Action, year: 99999, platform: PC
+• What validation error did your app return?
+It returned a 400 Bad Request status and a list of specific error messages.
+• How could this collection help another developer understand your API?
+It provides a guide shows which endpoints exist, the required fields for inputs, and the expected error responses, allowing them to test the API  without reading through all the source code.
