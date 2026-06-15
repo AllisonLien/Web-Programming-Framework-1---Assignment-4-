@@ -1,6 +1,3 @@
-困難 理解程式 不知道轉換新的json檔案是怎麼運作的 按照步驟也有點不知道是怎麼進行
-用了express-validator而不是提到的validateAddForm
-
 **README Questions**
 1. What is the difference between your /table-js route and your /table route?
 The /table-js route manually builds the HTML table by using JavaScript strings and sends the raw string to the browser using res.send(). The /table route uses the EJS to achieve separation of concerns; it passes the data array to the views/table.ejs file using res.render(), which handles the HTML structure cleanly.
