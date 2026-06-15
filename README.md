@@ -1,3 +1,5 @@
+Video:https://www.youtube.com/watch?v=KT90iSATILY
+
 **README Questions**
 1. What is the difference between your /table-js route and your /table route?
 The /table-js route manually builds the HTML table by using JavaScript strings and sends the raw string to the browser using res.send(). The /table route uses the EJS to achieve separation of concerns; it passes the data array to the views/table.ejs file using res.render(), which handles the HTML structure cleanly.
@@ -38,7 +40,15 @@ Q:Also explain what would happen if your dataset does not have the field name yo
 If the Genre field is not exist in my dataset (or spelling errors or capitalization mismatches).This can trigger the serious consequences: generating undefined error values, generating invalid image links (broken links), and potential script crashes.
 
 **Step3 Check point**
-Visit /data, /table, and submit your /add form. Copy three logger outputs from your terminal and explain what each line tells you about the reques
+-Complete the following table: 
+1.express.static(...) 
+It serves static files (like HTML, CSS, client-side JS, and images) directly to the browser without needing to write custom routes for each file.
+2.express.urlencoded(...) 
+It parses incoming requests with URL-encoded payloads (like data submitted from standard HTML forms) and makes the parsed data available in req.body.
+3.express.json()
+It parses incoming requests with JSON payloads (typically sent from frontend fetch API or Postman) and makes the parsed JSON data available in req.body.
+
+-Visit /data, /table, and submit your /add form. Copy three logger outputs from your terminal and explain what each line tells you about the reques
 [6/13/2026, 2:02:49 PM] GET /data
 This indicates that the client made a GET request to retrieve the JSON dataset from the /data route.
 [6/13/2026, 2:03:08 PM] GET /table
