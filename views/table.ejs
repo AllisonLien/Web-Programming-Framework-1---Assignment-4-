@@ -11,6 +11,7 @@
             <tr>
                 <th>Rank</th>
                 <th>Name</th>
+                <th>Image</th>
                 <th>Genre</th>
                 <th>Platform</th>
                 <th>Global Sales (Millions)</th>
@@ -21,6 +22,9 @@
             <tr>
                 <td><%= game.Rank %></td>
                 <td><a href="/data/<%= game.Rank %>"><%= game.Name %></a></td>
+                <td>
+                      <img src="<%= game.imageUrl %>" alt="<%= game.imageAlt %>" style="width: 100px;">
+                </td>
                 <td><%= game.Genre %></td>
                 <td><%= game.Platform %></td>
                 <td><%= game.Global_Sales %></td>

@@ -16,15 +16,36 @@ Github:https://github.com/AllisonLien/Webprograming_Assignment2
 Vercel:https://webprograming-assignment2.vercel.app/
 
 
+**Route Mapping **(Domain Customization)**
+Home Route-GET / : The main landing page with links to all endpoints.
+All Data- GET /data:  Returns the complete video game dataset in JSON format.
+One Record- GET /data/:id: Returns a specific game matched by its Rank (ID). 
+GET /search: Searches for games by their Name using req.query.
+GET /filter: Filters games by Genre using req.query
+Custom Feature-GET /sales: Returns calculated total and average global sales statistics. 
+GET /table-js: Displays 50 games using a manually built HTML string table.
+Table View-GET /table: Displays games beautifully using the EJS template engine. 
+Form Page-GET /add-game: Renders the HTML form to submit a new video game. 
+Submit Data- POST /add-game: Processes the form submission with validation. 
+
+
+
 **Step1 Check point**
-Explain the command you used to run add-images.js. What are the input file, output file, category-like field, and title/name field in your command? Also explain what would happen if your dataset does not have the field name you passed as categoryField.
+Q:Explain the command you used to run add-images.js. What are the input file, output file, category-like field, and title/name field in your command? 
+A:node tools/add-images.js data/dataset.json data/dataset-with-images.json Genre Name
+input file: data/dataset.json
+output file: data/dataset-with-images.json 
+category-like field:Genre
+title/name field :Name
+Q:Also explain what would happen if your dataset does not have the field name you passed as categoryField.
+If the Genre field is not exist in my dataset (or spelling errors or capitalization mismatches).This can trigger the serious consequences: generating undefined error values, generating invalid image links (broken links), and potential script crashes.
 
 **Step3 Check point**
 Visit /data, /table, and submit your /add form. Copy three logger outputs from your terminal and explain what each line tells you about the reques
 [6/13/2026, 2:02:49 PM] GET /data
 This indicates that the client made a GET request to retrieve the JSON dataset from the /data route.
 [6/13/2026, 2:03:08 PM] GET /table
-This shows a GET request to the /games route, which means the user navigated to the page that displays the EJS HTML table of the video games dataset.
+This shows a GET request to the /table route, which means the user navigated to the page that displays the EJS HTML table of the video games dataset.
 [6/13/2026, 2:03:37 PM] GET /add-game
 This shows a POST request to the /add-game route. The POST method indicates that the user has submitted the HTML form to add a new game record. The data from the form is included in the request body, not in the URL.
 
